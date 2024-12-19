@@ -521,11 +521,18 @@ input {
     border-radius: 4px;
     width: 264PX;
     height: 40px;
-
+    
     border: 1px solid #fff;
 
     background: #2e2f42;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    background-color: transparent;
+
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    padding-left: 16px;
+    color: #ffffff;
 } 
 
 .form-input::placeholder {
@@ -534,7 +541,7 @@ input {
     font-size: 12px;
     line-height: 2;
     letter-spacing: 0.04em;
-    color: #fff;
+    color: #ffffff;
 }
 
 .button-subscribe {
@@ -562,6 +569,7 @@ input {
 
 .icon-telegram {
     fill: #FFFFFF;
+    margin-left: 16px;
 }
 
 /* ============modal-overlay=========== */
@@ -595,18 +603,19 @@ input {
     background-color: #fcfcfc;
     border-radius: 4px;
     width: 408px;
-    height: 584px;
+    min-height: 584px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);  
 
     transform: translate(-50%, -50%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 72px 24px 24px 24px;
 }
 
 .button-close {
+    padding: 0;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
@@ -620,54 +629,51 @@ input {
     right: 24px;
     
     cursor: pointer;  
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-close:hover,
 .button-close:focus {
     background-color: #404bbf;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
+    border: none;
+}
 
 .icon-close {
     stroke: rgba(0, 0, 0, 0.1);
-
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-close:hover,
 .icon-close:focus {
-    fill: #fff;
-    border: none;
+    fill: #ffffff;
 }
 
 .form-label-p {
-    padding-top: 72px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
-}
-
-.form {
-    margin-top: 16px;
-    margin-left: 24px;
-    margin-right: 24px;
+    margin-bottom: 16px;
 }
 
 .form-div {
-    padding-bottom: 8px;
+    margin-bottom: 16px;
 }
 
 .form-label {
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.16667;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
-    text-transform: capitalize;
-    padding-bottom: 4px;
+    
+    display: block;
+    margin-bottom: 4px;
+    
 }
 
 .form-svg {
@@ -678,9 +684,13 @@ input {
     width: 100%;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
-    line-height: 40px;
+    height: 40px;
     padding-left: 38px;
     outline: none;
+    background-color: transparent;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .form-input-back:focus + .icon-ppe {
@@ -697,11 +707,9 @@ input {
 .icon-ppe {
     position: absolute;
     top: 50%;
-    left: 0;
+    left: 16px;
 
     transform: translateY(-50%);
-    margin-left: 16px;
-    margin-bottom: 8px;
 }
 
 .icon-ppe:hover {
@@ -715,15 +723,24 @@ input {
     width: 100%;
     min-height: 120px;
     outline: none;
-    padding-top: 8px;
-    padding-left: 16px;
+    padding: 8px 16px;
+
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+
+    background-color: transparent;
+    outline: transparent;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
 .textarea::placeholder {
         font-weight: 400;
         font-size: 12px;
-        line-height: 1.16667;
+        line-height: 1.17;
         letter-spacing: 0.04em;
         color: rgba(46, 47, 66, 0.4);
 }
@@ -740,7 +757,7 @@ input {
     cursor: pointer;
     display: inline-flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     flex-wrap: wrap;
     fill: transparent;
     width: 16px;
@@ -749,6 +766,9 @@ input {
 
     border-radius: 2px;
     border: 1px solid rgba(46, 47, 66, 0.4);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .checkbox:checked + .form-checkbox .custom-checkbox {
@@ -760,7 +780,7 @@ input {
 .form-checkbox {
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.16667;
+    line-height: 1.17;
     letter-spacing: 0.04em;
     color: #8e8f99;
         
@@ -768,9 +788,11 @@ input {
 
 .blue {
     text-decoration: underline;
+    color: #4d5ae5;;
 }
 
 .button-send-modal {
+    cursor: pointer;
     color:#fff;
     background-color: #4d5ae5;
     border: none;
@@ -788,6 +810,8 @@ input {
 
     display: block;
     margin-left: 95px;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-send:hover,
