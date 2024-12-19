@@ -718,6 +718,10 @@ input {
     fill: #4d5ae5;
 }
 
+.form-div.form-div-four {
+    margin-bottom: 16px;
+}
+
 .textarea {
     resize: none;
     border: 1px solid rgba(46, 47, 66, 0.4);
